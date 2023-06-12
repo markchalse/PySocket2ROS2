@@ -10,7 +10,8 @@ COMMAND_CODE={
     'create_publisher':'400',
     'create_publisher_reply':'401',
     'publish_topic':'402',
-    'publish_topic_reply':'403'
+    'publish_topic_reply':'403',
+    'socket_pass_msg':'501'
 }
 
 class CommandSys:

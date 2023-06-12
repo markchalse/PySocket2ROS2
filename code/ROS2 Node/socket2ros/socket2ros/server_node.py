@@ -25,7 +25,7 @@ class SocketClientRosAgent():
     def handle_msg(self,msg):
         msg= msg.data
         try:
-            self.client.send(msg.encode('utf-8'))
+            self.client.send(CommandSys().pack_command(COMMAND_CODE['socket_pass_msg'],msg).encode('utf-8'))
         except Exception as e:
             return
         print ("send topic=%s msg to %s  :%s"%(self.topic_name , self.client_id , msg))
